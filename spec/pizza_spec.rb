@@ -10,9 +10,10 @@ describe Pizza do
   describe ".initialize" do
     it "records all of the toppings" do
       toppings = [
-        Topping.new("mushrooms", vegetarian: true),
+        Topping.new("mushrooms", vegetarian=true),
         Topping.new("pepperoni")
       ]
+      pizza = Pizza.new(toppings)
 
       expect(pizza.toppings).to eq(toppings)
     end
@@ -33,7 +34,7 @@ describe 'Topping.initialize' do
   end
 
   it "sets whether or not the topping is vegetarian" do
-    topping = Topping.new "bell peppers", vegetarian: true
+    topping = Topping.new "bell peppers", vegetarian=true
 
     expect(topping.vegetarian).to eq(true)
   end
