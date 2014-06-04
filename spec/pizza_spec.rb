@@ -6,6 +6,19 @@ describe Pizza do
   end
 end
 
+describe Pizza do
+  describe ".initialize" do
+    it "records all of the toppings" do
+      toppings = [
+        Topping.new("mushrooms", vegetarian: true),
+        Topping.new("pepperoni")
+      ]
+
+      expect(pizza.toppings).to eq(toppings)
+    end
+  end
+end
+
 describe Topping do
   it "exists" do
     expect(Topping).to be_a(Class)
